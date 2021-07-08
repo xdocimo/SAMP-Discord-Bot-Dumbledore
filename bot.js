@@ -156,8 +156,8 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'En línea', value: response['players'], inline: true },
-						{ name: 'Hora IG', value: response['worldtime'], inline: true },
+						{ name: 'En línea', value: response['online'], inline: true },
+						{ name: 'Contraseña', value: five, inline: true },
 					],
 				}
 			}
