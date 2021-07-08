@@ -24,7 +24,6 @@ let userToSubmitApplicationsTo = '710195458680684695';//Default Channel Id for U
 let reportChannelID = '714432112031170562'; // Channel for the ingam reports
 let adminCmdsChannelID = '710195250911641741'; // Admin Cmds channel
 let Bot_debug_mode = false;
-    client.user.setStatus('online', 'https://newstate-games.com') 
 
 //_______________________________[APPLICATIONS]______________________________________________
 let applicationQuestions = require("./application-questions.js"); //This .js file has the default questions
@@ -135,7 +134,7 @@ function GetPlayersOnline(msg)
 			
 			const logMessage = {
 				embed: {
-					title: 'Hubo un error mientras obteniamos la lista de jugadores:',
+					title: 'Hubo un problema mientras encontrabamos la lista de jugadores',
 					color: embedColor,
 					fields: [
 						{ name: 'Error:', value: error, inline: true },
@@ -148,7 +147,7 @@ function GetPlayersOnline(msg)
 		else
 		{   
 			var str = "Server Info";
-			var value = str.concat(' IP: ',response['address'],' En línea: ',response['players'],'/',response['maxplayers']); 
+			var value = str.concat(' IP: ',response['address'],' Players Online: ',response['online'],'/',response['maxplayers']); 
 			const embedColor = 0x00ff00;
 
 			const logMessage = {
@@ -157,14 +156,10 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'En línea', value: response['online']/response['maxplayers'], inline: true },
+						{ name: 'Jugadores en línea', value: response['online']/response['maxplayers'], inline: true },
 						{ name: 'Contraseña', value: 'five', inline: true },
 					],
-				},
-				footer: {
-					text: 'Some footer text here',
-					icon_url: 'https://i.imgur.com/wSTFkRM.png',
-				},
+				}
 			}
 			msg.channel.send(logMessage)
 			if(Bot_debug_mode)
