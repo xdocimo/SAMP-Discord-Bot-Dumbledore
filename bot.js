@@ -15,8 +15,8 @@ var query = require('samp-query');
 //_____________________________[BOT Configuration]_________________________________________
 //@audit Settings
 
-const botChar = "ns."; // Bot prefix character
-let Samp_IP = "rp.nsrp.es";
+const botChar = "/"; // Bot prefix character
+let Samp_IP = "51.178.138.254";
 let Samp_Port = 7777;
 let Community_Tag ="WG";
 
@@ -152,13 +152,12 @@ function GetPlayersOnline(msg)
 
 			const logMessage = {
 				embed: {
-					title: 'Usuarios conectados en NewState',
-					description: 'Todos vuelven.'
+					title: 'Server Information',
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'Jugadores en línea', value: response['online'], inline: true },
-						{ name: 'Slots', value: response['maxplayers'], inline: true },
+						{ name: 'Players Online', value: response['online'], inline: true },
+						{ name: 'Max Players', value: response['maxplayers'], inline: true },
 					],
 				}
 			}
