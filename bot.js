@@ -15,8 +15,8 @@ var query = require('samp-query');
 //_____________________________[BOT Configuration]_________________________________________
 //@audit Settings
 
-const botChar = "/"; // Bot prefix character
-let Samp_IP = "167.114.138.30";
+const botChar = "samp."; // Bot prefix character
+let Samp_IP = "rp.nsrp.es";
 let Samp_Port = 7777;
 let Community_Tag ="WG";
 
@@ -122,8 +122,8 @@ function ReportSync()
 function GetPlayersOnline(msg) 
 {
 	var options = {
-		host: rp.nsrp.es,
-		port: 7777
+		host: Samp_IP,
+		port: Samp_Port
 	}
 	//console.log(options.host)
 	query(options, function (error, response) {
