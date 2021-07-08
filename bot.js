@@ -156,7 +156,7 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'En línea', value: response['online'], inline: true },
+						{ name: 'En línea', value: response['players'], inline: true },
 						{ name: 'Máximo', value: response['maxplayers'], inline: true },
 					],
 				}
