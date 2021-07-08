@@ -16,7 +16,7 @@ var query = require('samp-query');
 //@audit Settings
 
 const botChar = "/"; // Bot prefix character
-let Samp_IP = "rp.nsrp.es";
+let Samp_IP = "167.114.138.30";
 let Samp_Port = 7777;
 let Community_Tag ="WG";
 
