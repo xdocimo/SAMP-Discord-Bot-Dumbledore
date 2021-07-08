@@ -24,6 +24,7 @@ let userToSubmitApplicationsTo = '710195458680684695';//Default Channel Id for U
 let reportChannelID = '714432112031170562'; // Channel for the ingam reports
 let adminCmdsChannelID = '710195250911641741'; // Admin Cmds channel
 let Bot_debug_mode = false;
+    client.user.setStatus('online', 'https://newstate-games.com') 
 
 //_______________________________[APPLICATIONS]______________________________________________
 let applicationQuestions = require("./application-questions.js"); //This .js file has the default questions
@@ -159,7 +160,11 @@ function GetPlayersOnline(msg)
 						{ name: 'En línea', value: response['online'], inline: true },
 						{ name: 'Contraseña', value: 'five', inline: true },
 					],
-				}
+				},
+				footer: {
+					text: 'Some footer text here',
+					icon_url: 'https://i.imgur.com/wSTFkRM.png',
+				},
 			}
 			msg.channel.send(logMessage)
 			if(Bot_debug_mode)
