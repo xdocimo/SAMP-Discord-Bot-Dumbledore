@@ -134,7 +134,7 @@ function GetPlayersOnline(msg)
 			
 			const logMessage = {
 				embed: {
-					title: 'Hubo un error mientras obteniamos información del servidor.',
+					title: 'I wasent expecting that , Please try again later',
 					color: embedColor,
 					fields: [
 						{ name: 'Error:', value: error, inline: true },
@@ -147,18 +147,18 @@ function GetPlayersOnline(msg)
 		else
 		{   
 			var str = "Server Info";
-			var value = str.concat(' IP: ',response['address'],' Jugadores en línea: ',response['online'],'/',response['maxplayers']); 
+			var value = str.concat(' IP: ',response['address'],' Players Online: ',response['online'],'/',response['maxplayers']); 
 			const embedColor = 0x00ff00;
 
 			const logMessage = {
 				embed: {
-					title: 'Estadística del servidor de SA:MP de NewState',
+					title: 'Usuarios de NewState',
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'Jugadores en línea', value: response['online'], inline: true },
+						{ name: 'En línea', value: response['online'], inline: true },
 						{ name: 'Slots', value: response['maxplayers'], inline: true },
-						{ name: 'Contraseña', value: 'five', inline: true },
+						{ name: 'Password', value: 'five', inline: true },
 					],
 				}
 			}
