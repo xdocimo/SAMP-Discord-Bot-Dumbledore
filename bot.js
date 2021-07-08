@@ -134,7 +134,7 @@ function GetPlayersOnline(msg)
 			
 			const logMessage = {
 				embed: {
-					title: 'I wasent expecting that , Please try again later',
+					title: 'Hubo un error mientras obteniamos los datos del servidor. Prueba luego!',
 					color: embedColor,
 					fields: [
 						{ name: 'Error:', value: error, inline: true },
