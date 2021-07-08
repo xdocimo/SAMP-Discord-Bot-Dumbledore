@@ -134,7 +134,7 @@ function GetPlayersOnline(msg)
 			
 			const logMessage = {
 				embed: {
-					title: 'I wasent expecting that , Please try again later',
+					title: 'Hubo un error mientras obteniamos la lista de jugadores:',
 					color: embedColor,
 					fields: [
 						{ name: 'Error:', value: error, inline: true },
@@ -156,8 +156,8 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'Players Online', value: response['online'], inline: true },
-						{ name: 'Max Players', value: response['maxplayers'], inline: true },
+						{ name: 'En línea', value: response['online'], inline: true },
+						{ name: 'Máximo', value: response['maxplayers'], inline: true },
 					],
 				}
 			}
