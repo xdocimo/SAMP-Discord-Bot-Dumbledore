@@ -15,7 +15,7 @@ var query = require('samp-query');
 //_____________________________[BOT Configuration]_________________________________________
 //@audit Settings
 
-const botChar = "/"; // Bot prefix character
+const botChar = "samp."; // Bot prefix character
 let Samp_IP = "rp.nsrp.es";
 let Samp_Port = 7777;
 let Community_Tag ="WG";
@@ -156,7 +156,7 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'Jugadores en línea', value: response['online']'/'response['maxplayers'], inline: true },
+						{ name: 'Jugadores en línea', value: response['online'],'/',response['maxplayers'], inline: true },
 						{ name: 'Contraseña', value: 'five', inline: true },
 					],
 				}
