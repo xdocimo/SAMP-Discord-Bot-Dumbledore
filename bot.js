@@ -152,7 +152,7 @@ function GetPlayersOnline(msg)
 
 			const logMessage = {
 				embed: {
-					title: 'Server Information',
+					title: 'Usuarios de NewState',
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
