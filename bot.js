@@ -157,6 +157,7 @@ function GetPlayersOnline(msg)
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
 						{ name: 'En línea', value: response['online'], inline: true },
+						{ name: 'Slots', value: response['maxplayers'], inline: true },
 						{ name: 'Contraseña', value: 'five', inline: true },
 					],
 				}
