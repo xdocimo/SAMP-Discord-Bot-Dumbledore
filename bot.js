@@ -15,7 +15,7 @@ var query = require('samp-query');
 //_____________________________[BOT Configuration]_________________________________________
 //@audit Settings
 
-const botChar = "samp."; // Bot prefix character
+const botChar = "/"; // Bot prefix character
 let Samp_IP = "rp.nsrp.es";
 let Samp_Port = 7777;
 let Community_Tag ="WG";
