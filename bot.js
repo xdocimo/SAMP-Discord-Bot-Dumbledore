@@ -147,7 +147,7 @@ function GetPlayersOnline(msg)
 		else
 		{   
 			var str = "Server Info";
-			var value = str.concat(' IP: ',response['address'],' Players Online: ',response['online'],'/',response['maxplayers']); 
+			var value = str.concat(' IP: ',response['address'],' En línea: ',response['players'],'/',response['maxplayers']); 
 			const embedColor = 0x00ff00;
 
 			const logMessage = {
@@ -156,7 +156,7 @@ function GetPlayersOnline(msg)
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
-						{ name: 'En línea', value: response['online'], inline: true },
+						{ name: 'En línea', value: response['players'], inline: true },
 						{ name: 'Hora IG', value: response['worldtime'], inline: true },
 					],
 				}
