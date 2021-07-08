@@ -122,8 +122,8 @@ function ReportSync()
 function GetPlayersOnline(msg) 
 {
 	var options = {
-		host: Samp_IP,
-		port: Samp_Port
+		host: rp.nsrp.es,
+		port: 7777
 	}
 	//console.log(options.host)
 	query(options, function (error, response) {
@@ -134,7 +134,7 @@ function GetPlayersOnline(msg)
 			
 			const logMessage = {
 				embed: {
-					title: 'Hubo un problema mientras encontrabamos la lista de jugadores',
+					title: 'Hubo un error mientras obteniamos información del servidor.',
 					color: embedColor,
 					fields: [
 						{ name: 'Error:', value: error, inline: true },
@@ -147,16 +147,17 @@ function GetPlayersOnline(msg)
 		else
 		{   
 			var str = "Server Info";
-			var value = str.concat(' IP: ',response['address'],' Players Online: ',response['online'],'/',response['maxplayers']); 
+			var value = str.concat(' IP: ',response['address'],' Jugadores en línea: ',response['online'],'/',response['maxplayers']); 
 			const embedColor = 0x00ff00;
 
 			const logMessage = {
 				embed: {
-					title: 'Usuarios de NewState',
+					title: 'Estadística del servidor de SA:MP de NewState',
 					color: embedColor,
 					fields: [
 						{ name: 'Server IP', value: response['address'], inline: true },
 						{ name: 'Jugadores en línea', value: response['online'], inline: true },
+						{ name: 'Slots', value: response['maxplayers'], inline: true },
 						{ name: 'Contraseña', value: 'five', inline: true },
 					],
 				}
